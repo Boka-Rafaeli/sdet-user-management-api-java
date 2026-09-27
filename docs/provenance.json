@@ -1,0 +1,7 @@
+{
+  "reference": "Boka-Rafaeli/sdet-user-management-api-typescript",
+  "tag": "v1.0.0",
+  "commit": "d21686120c38aa6292d6370dc0bfe09aeff039f1",
+  "openapiSha256": "1ec53ff6233cd04241042ef9420a7ea21261956daf98d2ef6fba47b1210a3ff4",
+  "image": "ghcr.io/danielsilva-loanpro/sdet-interview-challenge@sha256:c80c42ffafccb6ba9cd9a128421445d308225f09902c03aeadbc99e321176bbc"
+}

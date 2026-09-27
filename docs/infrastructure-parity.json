@@ -1,0 +1,487 @@
+[
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for ",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/infrastructure/runtime.test.ts",
+    "purpose": "managed Docker API starts on a private port and stops idempotently",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/baseline.test.ts",
+    "purpose": "exact matching signature produces a dedicated known-defect signal",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/baseline.test.ts",
+    "purpose": "restored expected behavior blocks a stale baseline",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/baseline.test.ts",
+    "purpose": "changed signature is not expected failure",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/baseline.test.ts",
+    "purpose": "asynchronous operational errors propagate unchanged",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/baseline.test.ts",
+    "purpose": "signature operational errors are not swallowed",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/baseline.test.ts",
+    "purpose": "strict or unaffected mode uses expected behavior ",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/client.test.ts",
+    "purpose": "raw JSON shape ",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/client.test.ts",
+    "purpose": "raw bytes retain custom media type and reject conflicting body before transport",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/client.test.ts",
+    "purpose": "all helpers retain environment, methods and percent encoding",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/client.test.ts",
+    "purpose": "default, missing, empty and incorrect authentication remain distinct",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/client.test.ts",
+    "purpose": "omitted JSON body has no content and no content-type",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/client.test.ts",
+    "purpose": "transport errors propagate and closed client rejects",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "configuration defaults and CLI overrides environment without mutation",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "invalid settings rejected: ",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "dev/prod settings are independent and empty token remains empty",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract-source.test.ts",
+    "purpose": "source contract retains five operations and both environments",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace explains success and correlates with HTTP request",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace explains ",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "empty response has a successful trace",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace is opt-in",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "unexpected-status errors redact structured and configured secrets",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "contract returns data unchanged and permits schema-valid empty name/additional fields",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "empty 204 passes",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "age is not coerced: ",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "Python email format compatibility: ",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "invalid email rejected",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "external references are rejected",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/evidence-documentation.test.ts",
+    "purpose": "historical generated case totals cite their actual CI execution",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/evidence-documentation.test.ts",
+    "purpose": "## Execution evidence\\n",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/evidence-documentation.test.ts",
+    "purpose": "\\n## ",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/evidence-documentation.test.ts",
+    "purpose": "\\n\\n",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/evidence.test.ts",
+    "purpose": "retained HTML/XML/log/JSON reject secret leaks independently of NDJSON",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/evidence.test.ts",
+    "purpose": "unsupported binary formats and symlinks cannot bypass the artifact gate",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-checks.test.ts",
+    "purpose": "catalog accounts for all 13 registry checks and four explicit N/A checks",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-checks.test.ts",
+    "purpose": "server/status/media/schema checkers have independent passing and failing witnesses",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-checks.test.ts",
+    "purpose": "positive acceptance and negative rejection retain source status allowlists",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-checks.test.ts",
+    "purpose": "missing required Authentication has passing and failing witnesses",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-checks.test.ts",
+    "purpose": "unsupported verb requires 405 + Allow and bypasses documented response checks",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-checks.test.ts",
+    "purpose": "OPTIONS Allow checker permits implicit HEAD/OPTIONS and rejects missing/extra methods",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-email.test.ts",
+    "purpose": "generated email format matches the pinned jsonschema_rs golden corpus",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-email.test.ts",
+    "purpose": "generated response/request email validation is stricter than deterministic FormatChecker",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-fuzz.test.ts",
+    "purpose": "the same seed/config reproduces cases and each advertised mode passes an independent oracle",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-fuzz.test.ts",
+    "purpose": "fuzz counterexamples shrink without losing the failure and replay exactly",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-fuzz.test.ts",
+    "purpose": "passing property obeys example count and operational exceptions remain errors",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-resources.test.ts",
+    "purpose": "positive PUT resets, creates, verifies and injects the same owned email into path/body",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-resources.test.ts",
+    "purpose": "negative PUT body stays invalid, renamed body email is tracked, invalid paths are not repaired",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-resources.test.ts",
+    "purpose": "reset, create and verify failures stop preparation at the failed step",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-resources.test.ts",
+    "purpose": "cleanup continues after transport errors, ignores DELETE status, but exposes programming errors",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-runner.test.ts",
+    "purpose": "all phases integrate across five operations with serial requests and valid scrubbed evidence",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-runner.test.ts",
+    "purpose": "\\n",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-runner.test.ts",
+    "purpose": "API findings are returned, bounded and reported without being converted to engine errors",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-runner.test.ts",
+    "purpose": "transport/setup failure blocks, retains an error report, and redacts its message",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-runner.test.ts",
+    "purpose": "phase/coverage limits are visible and aborted execution is an operational failure",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-schema.test.ts",
+    "purpose": "discovers all five operation IDs, shared path parameters and required Authentication",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-schema.test.ts",
+    "purpose": "examples and boundary mutations are derived from YAML and independently schema-checked",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-schema.test.ts",
+    "purpose": "coverage preserves invalid path metadata and generates missing Authentication and unsupported methods",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-schema.test.ts",
+    "purpose": "unsupported pattern, response headers, security and external refs fail closed",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/generation-schema.test.ts",
+    "purpose": "a small changed schema changes examples, required-field cases and numeric boundaries",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/http-trace.test.ts",
+    "purpose": "HTTP tracing hides headers, nested secrets and URL credentials",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/http-trace.test.ts",
+    "purpose": "tracing is silent by default and handles empty response",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/native-transport.test.ts",
+    "purpose": "native transport preserves raw bytes and returns redirects without following them",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/native-transport.test.ts",
+    "purpose": "native transport deadline terminates a server that never responds",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/parity.test.ts",
+    "purpose": "every reference scenario maps to an existing TypeScript case and file",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/parity.test.ts",
+    "purpose": "the supplied OpenAPI bytes remain unchanged and published sample provenance is explicit",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/readiness.test.ts",
+    "purpose": "readiness retries operational errors and non-200 until ready",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/readiness.test.ts",
+    "purpose": "readiness fails within deadline with bounded sleeps",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/redaction.test.ts",
+    "purpose": "recursively redacts normalized sensitive keys without mutating source",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/redaction.test.ts",
+    "purpose": "raw, percent-encoded and plus-encoded secrets disappear from keys and values",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/redaction.test.ts",
+    "purpose": "text redaction covers URLs and diagnostic error strings",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/redaction.test.ts",
+    "purpose": "overlapping secrets are replaced longest first and empty secrets are ignored",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/redaction.test.ts",
+    "purpose": "JSON primitives, shared values and prototype-named keys remain safe",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/redaction.test.ts",
+    "purpose": "diagnostic cycles do not cause infinite recursion",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/redaction.test.ts",
+    "purpose": "independent verifier rejects both surviving values and sensitive structures",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/redaction.test.ts",
+    "purpose": "raw redaction remains available for malformed Unicode diagnostic input",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "scrubs nested NDJSON records, preserves modes and leaves unrelated files intact",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "\\n",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "accepts a tree without NDJSON and an empty NDJSON file",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "accepts CRLF and a final record without a newline",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects missing and non-directory evidence roots",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects a directory masquerading as an NDJSON file",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects root and NDJSON symlinks without modifying their targets",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects directory symlinks so linked raw evidence cannot bypass verification",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects resolved paths that escape the evidence root",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "atomicity applies to each file; later bad file still blocks the whole tree",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "exclusive temporary-file collision never deletes an unowned file",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "CLI reads env secrets, returns truthful exit codes and never prints their values",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/test-data.test.ts",
+    "purpose": "factory supplies unique environment-labelled emails and preserves overrides",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/test-data.test.ts",
+    "purpose": "cleanup only deletes registered resources in their own environments",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/test-data.test.ts",
+    "purpose": "curated cleanup transport errors propagate",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/workflow.test.ts",
+    "purpose": "external actions are immutable and checkout does not retain credentials",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/workflow.test.ts",
+    "purpose": "repository permissions and application credential are narrowly scoped",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/workflow.test.ts",
+    "purpose": "generated operational failures block but still run after deterministic failure",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/workflow.test.ts",
+    "purpose": "evidence upload follows a successful scrub and retention is bounded",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/workflow.test.ts",
+    "purpose": "container cleanup executes even after failures",
+    "javaEvidence": null
+  },
+  {
+    "source": "tests/unit/workflow.test.ts",
+    "purpose": "every workflow keeps external actions immutable",
+    "javaEvidence": null
+  }
+]
