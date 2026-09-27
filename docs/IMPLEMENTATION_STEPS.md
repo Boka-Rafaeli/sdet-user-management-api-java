@@ -23,3 +23,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-27T04:46:50Z: `feat(baseline): classify exact known-defect signatures` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `0db170e`.
 
 2026-09-27T04:47:53Z: `feat(reports): emit complete and safe execution reports` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `73503aa`.
+
+2026-09-27T04:49:06Z: `test(crud): cover user lifecycle and conflicts` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `84d37b6`.
