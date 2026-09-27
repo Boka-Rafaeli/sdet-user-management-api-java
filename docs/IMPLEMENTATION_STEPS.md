@@ -15,3 +15,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-27T04:43:12Z: `feat(contract): validate OpenAPI response contracts` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `34a7fed`.
 
 2026-09-27T04:43:33Z: `feat(contract): preserve deterministic and generated email formats` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `02904b6`.
+
+2026-09-27T04:45:00Z: `feat(runtime): manage isolated Docker lifecycle` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `e17ad3a`.
