@@ -9,3 +9,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-27T04:38:57Z: `test(platform): prove runner and property engine compatibility` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `46843ea`.
 
 2026-09-27T04:40:58Z: `feat(config): add environment settings and CLI options` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `714bb56`.
+
+2026-09-27T04:41:15Z: `feat(client): implement exact API transport semantics` — fresh index export; `./mvnw -B verify` passed. API coordinator also runs when present. Previous SHA: `ba14e31`.
