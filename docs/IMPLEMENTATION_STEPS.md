@@ -45,3 +45,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T03:17:18Z: `feat(generation): add seeded fuzzing shrinking and replay` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `09a1c78`.
 
 2026-09-28T03:17:36Z: `feat(generation): provision verified resources for writes` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `3293693`.
+
+2026-09-28T03:18:49Z: `fix(ci): express pinned Temurin patch in Adoptium SemVer` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `0d8acd8`.

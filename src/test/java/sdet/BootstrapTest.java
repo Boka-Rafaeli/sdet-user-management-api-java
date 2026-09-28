@@ -8,5 +8,6 @@ class BootstrapTest {
   @Test
   void java25() {
     assertEquals(25, Runtime.version().feature());
+    assertEquals("25.0.4.1+1-LTS", Runtime.version().toString());
   }
 }
