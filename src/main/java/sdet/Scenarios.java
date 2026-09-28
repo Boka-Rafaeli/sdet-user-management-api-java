@@ -109,6 +109,7 @@ public final class Scenarios {
     if (scope.equals("isolation")) return b.cases;
     Crud.add(b);
     Updates.add(b);
+    Validation.post(b);
     return b.cases;
   }
 
