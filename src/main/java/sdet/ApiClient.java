@@ -137,7 +137,16 @@ public final class ApiClient implements AutoCloseable {
             normalized,
             body,
             settings.timeout());
-    return transport.send(request);
+    var trace = new Trace(settings, System.out::println);
+    trace.request(request);
+    try {
+      var response = transport.send(request);
+      trace.response(response);
+      return response;
+    } catch (IOException | InterruptedException error) {
+      trace.error(error);
+      throw error;
+    }
   }
 
   private Response send(Request request) throws IOException, InterruptedException {

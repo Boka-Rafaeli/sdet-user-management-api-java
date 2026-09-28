@@ -29,6 +29,14 @@ public final class Reports {
   public static void write(
       Path dir, String scope, String digest, List<String> expected, List<Entry> entries)
       throws IOException {
+    var redaction = new Redaction(System.getenv().getOrDefault("AUTH_TOKEN", "mysecrettoken"));
+    entries =
+        entries.stream()
+            .map(
+                e ->
+                    new Entry(
+                        redaction.text(e.id()), e.status(), e.bug(), redaction.body(e.detail())))
+            .toList();
     Files.createDirectories(dir);
     boolean ok = complete(expected, entries);
     var counts = new TreeMap<String, Long>();

@@ -37,3 +37,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T03:11:05Z: `test(auth): verify DELETE authorization behavior` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `4e8dbd5`.
 
 2026-09-28T03:12:26Z: `test(isolation): verify dev and prod independence` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `5e5df8d`.
+
+2026-09-28T03:13:00Z: `feat(trace): add redacted HTTP and contract diagnostics` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `2c74fb1`.
