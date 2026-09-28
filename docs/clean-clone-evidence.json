@@ -1,0 +1,39 @@
+{
+  "commit": "0fae6e631b3e0bbf8ff9c40acc9cfeb5bce1e442",
+  "cloneSource": "https://github.com/Boka-Rafaeli/sdet-user-management-api-java.git",
+  "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+  "maven": "3.9.11",
+  "emptyMavenUserHome": true,
+  "dedicatedEmptyRepository": true,
+  "command": "MAVEN_USER_HOME=<empty> ./mvnw -Dmaven.repo.local=<empty>/repository -B verify -Pfull",
+  "counts": {
+    "tests": 792,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "api": {
+    "dev": {
+      "ABORTED": 0,
+      "FAIL": 0,
+      "PASS": 35,
+      "SKIP": 0,
+      "XFAIL": 20
+    },
+    "prod": {
+      "ABORTED": 0,
+      "FAIL": 0,
+      "PASS": 38,
+      "SKIP": 0,
+      "XFAIL": 17
+    },
+    "isolation": {
+      "ABORTED": 0,
+      "FAIL": 0,
+      "PASS": 1,
+      "SKIP": 0,
+      "XFAIL": 0
+    }
+  },
+  "logSha256": "e437ad8718102f447a40571ea6daee06019f21d80fe4da39481b9aaa5c157aeb"
+}

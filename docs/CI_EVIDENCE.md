@@ -15,3 +15,5 @@ Exact step outcomes and commit SHAs are retained in [ci-probes.json](ci-probes.j
 Intentional probes are red by design; a green probe would fail the acceptance audit.
 Generated totals in sample evidence belong only to the run identified by its provenance.
 Final clean-clone and release evidence are recorded in `ACCEPTANCE.md` when verified.
+
+Additional artifact gates: [dev scrub failure](https://github.com/Boka-Rafaeli/sdet-user-management-api-java/actions/runs/36439958932) and [prod scrub failure](https://github.com/Boka-Rafaeli/sdet-user-management-api-java/actions/runs/36439965952), both on `933a5b7ba49d6b40ad9ef6c7acb5d695487b18c5`. Each completed deterministic/generated execution and cleanup, failed scrub and skipped upload.

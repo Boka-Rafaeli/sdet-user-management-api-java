@@ -208,5 +208,145 @@
         ]
       }
     ]
+  },
+  {
+    "probe": "scrub-dev",
+    "run": 36439958932,
+    "url": "https://github.com/Boka-Rafaeli/sdet-user-management-api-java/actions/runs/36439958932",
+    "sha": "933a5b7ba49d6b40ad9ef6c7acb5d695487b18c5",
+    "conclusion": "failure",
+    "jobs": [
+      {
+        "name": "api (dev)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run ./mvnw -B -DskipTests package",
+            "conclusion": "success"
+          },
+          {
+            "name": "Start isolated API and wait for readiness",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run deterministic scope",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run generated exploration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Capture sanitized logs",
+            "conclusion": "success"
+          },
+          {
+            "name": "Remove owned container",
+            "conclusion": "success"
+          },
+          {
+            "name": "Scrub and verify evidence",
+            "conclusion": "failure"
+          },
+          {
+            "name": "Upload verified evidence",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "probe": "scrub-prod",
+    "run": 36439965952,
+    "url": "https://github.com/Boka-Rafaeli/sdet-user-management-api-java/actions/runs/36439965952",
+    "sha": "933a5b7ba49d6b40ad9ef6c7acb5d695487b18c5",
+    "conclusion": "failure",
+    "jobs": [
+      {
+        "name": "api (prod)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run ./mvnw -B -DskipTests package",
+            "conclusion": "success"
+          },
+          {
+            "name": "Start isolated API and wait for readiness",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run deterministic scope",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run generated exploration",
+            "conclusion": "success"
+          },
+          {
+            "name": "Capture sanitized logs",
+            "conclusion": "success"
+          },
+          {
+            "name": "Remove owned container",
+            "conclusion": "success"
+          },
+          {
+            "name": "Scrub and verify evidence",
+            "conclusion": "failure"
+          },
+          {
+            "name": "Upload verified evidence",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
   }
 ]

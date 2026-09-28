@@ -1,6 +1,6 @@
 # Commit index
 
-Each row is an actual Git commit. Each implementation step was cumulatively verified in a fresh index export before commit; see IMPLEMENTATION_STEPS.md for commands and timestamps. CI-specific validation necessarily follows pushing its implementation commit. No future SHA is invented.
+Actual SHA history through the preceding implementation commit. Every row has cumulative fresh-export validation in IMPLEMENTATION_STEPS.md. The final acceptance commit identifies its own parent there; its SHA is supplied by the release, never predicted here.
 
 | SHA | Function |
 |---|---|
@@ -37,3 +37,5 @@ Each row is an actual Git commit. Each implementation step was cumulatively veri
 | [e033eebb](https://github.com/Boka-Rafaeli/sdet-user-management-api-java/commit/e033eebbe11796858e6ddff0472e5cf215cf3fff) | feat(trace): explain ordered contract checks without exposing payloads |
 | [e3608772](https://github.com/Boka-Rafaeli/sdet-user-management-api-java/commit/e3608772f227760671b2212ab599fae7fb2e70ac) | fix(verification): retain negative fuzzing and fail incomplete JUnit reports |
 | [12ff0f5d](https://github.com/Boka-Rafaeli/sdet-user-management-api-java/commit/12ff0f5da1f9cc6792b48d5a80fc92fdcbd9ee8e) | test(runner): prove all failure modes through isolated JVM reports |
+| [933a5b7b](https://github.com/Boka-Rafaeli/sdet-user-management-api-java/commit/933a5b7ba49d6b40ad9ef6c7acb5d695487b18c5) | docs: publish Java guide manual assets and verified reports |
+| [0fae6e63](https://github.com/Boka-Rafaeli/sdet-user-management-api-java/commit/0fae6e631b3e0bbf8ff9c40acc9cfeb5bce1e442) | test(coverage): include subprocess infrastructure in JaCoCo evidence |

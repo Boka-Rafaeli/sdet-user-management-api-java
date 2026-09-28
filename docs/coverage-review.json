@@ -1,0 +1,412 @@
+{
+  "commit": "0fae6e631b3e0bbf8ff9c40acc9cfeb5bce1e442",
+  "note": "Subprocess agents included. Counts identify remaining branches, not an acceptance percentage. Container initialization failures, Java exception variants and unsupported future schema branches remain bounded limitations; controlled safety outcomes have independent witnesses.",
+  "classes": [
+    {
+      "class": "sdet/Generation",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 1295,
+          "missed": 119
+        },
+        "BRANCH": {
+          "covered": 139,
+          "missed": 41
+        },
+        "LINE": {
+          "covered": 223,
+          "missed": 18
+        },
+        "COMPLEXITY": {
+          "covered": 69,
+          "missed": 38
+        },
+        "METHOD": {
+          "covered": 15,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/GeneratedChecks",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 422,
+          "missed": 4
+        },
+        "BRANCH": {
+          "covered": 53,
+          "missed": 7
+        },
+        "LINE": {
+          "covered": 61,
+          "missed": 1
+        },
+        "COMPLEXITY": {
+          "covered": 27,
+          "missed": 7
+        },
+        "METHOD": {
+          "covered": 3,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/DockerRuntime",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 388,
+          "missed": 97
+        },
+        "BRANCH": {
+          "covered": 25,
+          "missed": 11
+        },
+        "LINE": {
+          "covered": 88,
+          "missed": 27
+        },
+        "COMPLEXITY": {
+          "covered": 21,
+          "missed": 13
+        },
+        "METHOD": {
+          "covered": 14,
+          "missed": 2
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/Exploration",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 953,
+          "missed": 39
+        },
+        "BRANCH": {
+          "covered": 89,
+          "missed": 11
+        },
+        "LINE": {
+          "covered": 177,
+          "missed": 6
+        },
+        "COMPLEXITY": {
+          "covered": 52,
+          "missed": 10
+        },
+        "METHOD": {
+          "covered": 12,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/ApiClient",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 330,
+          "missed": 0
+        },
+        "BRANCH": {
+          "covered": 24,
+          "missed": 0
+        },
+        "LINE": {
+          "covered": 67,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 28,
+          "missed": 0
+        },
+        "METHOD": {
+          "covered": 16,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/Settings",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 245,
+          "missed": 5
+        },
+        "BRANCH": {
+          "covered": 33,
+          "missed": 2
+        },
+        "LINE": {
+          "covered": 40,
+          "missed": 1
+        },
+        "COMPLEXITY": {
+          "covered": 22,
+          "missed": 2
+        },
+        "METHOD": {
+          "covered": 4,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/SuiteRunner",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 139,
+          "missed": 0
+        },
+        "BRANCH": {
+          "covered": 8,
+          "missed": 4
+        },
+        "LINE": {
+          "covered": 27,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 4,
+          "missed": 4
+        },
+        "METHOD": {
+          "covered": 2,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/Redaction",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 377,
+          "missed": 2
+        },
+        "BRANCH": {
+          "covered": 36,
+          "missed": 2
+        },
+        "LINE": {
+          "covered": 55,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 29,
+          "missed": 2
+        },
+        "METHOD": {
+          "covered": 12,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/Reports",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 317,
+          "missed": 0
+        },
+        "BRANCH": {
+          "covered": 20,
+          "missed": 0
+        },
+        "LINE": {
+          "covered": 61,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 17,
+          "missed": 0
+        },
+        "METHOD": {
+          "covered": 7,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/Contract",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 692,
+          "missed": 51
+        },
+        "BRANCH": {
+          "covered": 68,
+          "missed": 16
+        },
+        "LINE": {
+          "covered": 124,
+          "missed": 8
+        },
+        "COMPLEXITY": {
+          "covered": 51,
+          "missed": 16
+        },
+        "METHOD": {
+          "covered": 25,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/Fuzzing",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 445,
+          "missed": 85
+        },
+        "BRANCH": {
+          "covered": 35,
+          "missed": 14
+        },
+        "LINE": {
+          "covered": 110,
+          "missed": 15
+        },
+        "COMPLEXITY": {
+          "covered": 25,
+          "missed": 15
+        },
+        "METHOD": {
+          "covered": 12,
+          "missed": 1
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/Baseline",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 46,
+          "missed": 0
+        },
+        "BRANCH": {
+          "covered": 8,
+          "missed": 0
+        },
+        "LINE": {
+          "covered": 15,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 6,
+          "missed": 0
+        },
+        "METHOD": {
+          "covered": 2,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/GeneratedResources",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 247,
+          "missed": 14
+        },
+        "BRANCH": {
+          "covered": 34,
+          "missed": 4
+        },
+        "LINE": {
+          "covered": 58,
+          "missed": 3
+        },
+        "COMPLEXITY": {
+          "covered": 20,
+          "missed": 4
+        },
+        "METHOD": {
+          "covered": 5,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    },
+    {
+      "class": "sdet/Evidence",
+      "counters": {
+        "INSTRUCTION": {
+          "covered": 347,
+          "missed": 26
+        },
+        "BRANCH": {
+          "covered": 44,
+          "missed": 6
+        },
+        "LINE": {
+          "covered": 78,
+          "missed": 5
+        },
+        "COMPLEXITY": {
+          "covered": 25,
+          "missed": 6
+        },
+        "METHOD": {
+          "covered": 6,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      }
+    }
+  ]
+}
