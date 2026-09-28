@@ -1,0 +1,10 @@
+{
+  "implementationCommit": "12ff0f5da1f9cc6792b48d5a80fc92fdcbd9ee8e",
+  "source": "Fresh index export used to validate this implementation commit",
+  "jdk": "Eclipse Temurin 25.0.4.1+1-LTS",
+  "maven": "3.9.11",
+  "referenceCommit": "d21686120c38aa6292d6370dc0bfe09aeff039f1",
+  "command": "./mvnw -B verify; ./mvnw -q exec:java -Dexec.mainClass=sdet.Main -Dexec.args=\"verify --baseline\"",
+  "image": "ghcr.io/danielsilva-loanpro/sdet-interview-challenge@sha256:c80c42ffafccb6ba9cd9a128421445d308225f09902c03aeadbc99e321176bbc",
+  "capturedAt": "2026-09-28T14:52:29.403931+00:00"
+}

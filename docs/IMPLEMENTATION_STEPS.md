@@ -67,3 +67,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T14:49:51Z: `fix(verification): retain negative fuzzing and fail incomplete JUnit reports` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `e033eeb`.
 
 2026-09-28T14:51:08Z: `test(runner): prove all failure modes through isolated JVM reports` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `e360877`.
+
+2026-09-28T14:57:31Z: `docs: publish Java guide manual assets and verified reports` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `12ff0f5`.

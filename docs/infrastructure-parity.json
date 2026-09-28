@@ -1,487 +1,1383 @@
 [
   {
-    "source": "tests/infrastructure/gate.test.ts",
-    "purpose": "runner and reports agree for ",
-    "javaEvidence": null
-  },
-  {
-    "source": "tests/infrastructure/runtime.test.ts",
-    "purpose": "managed Docker API starts on a private port and stops idempotently",
-    "javaEvidence": null
-  },
-  {
     "source": "tests/unit/baseline.test.ts",
     "purpose": "exact matching signature produces a dedicated known-defect signal",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/BaselineTest.java",
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/baseline.test.ts",
     "purpose": "restored expected behavior blocks a stale baseline",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/BaselineTest.java",
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/baseline.test.ts",
     "purpose": "changed signature is not expected failure",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/BaselineTest.java",
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/baseline.test.ts",
     "purpose": "asynchronous operational errors propagate unchanged",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/BaselineTest.java",
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/baseline.test.ts",
     "purpose": "signature operational errors are not swallowed",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/BaselineTest.java",
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/baseline.test.ts",
-    "purpose": "strict or unaffected mode uses expected behavior ",
-    "javaEvidence": null
+    "purpose": "strict or unaffected mode uses expected behavior {\"enabled\":false}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/BaselineTest.java",
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/baseline.test.ts",
+    "purpose": "strict or unaffected mode uses expected behavior {\"environment\":\"prod\",\"affected\":[\"dev\"]}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/BaselineTest.java",
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/client.test.ts",
-    "purpose": "raw JSON shape ",
-    "javaEvidence": null
+    "purpose": "raw JSON shape null",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/client.test.ts",
+    "purpose": "raw JSON shape []",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/client.test.ts",
+    "purpose": "raw JSON shape \"text\"",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/client.test.ts",
     "purpose": "raw bytes retain custom media type and reject conflicting body before transport",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/client.test.ts",
     "purpose": "all helpers retain environment, methods and percent encoding",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/client.test.ts",
     "purpose": "default, missing, empty and incorrect authentication remain distinct",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/client.test.ts",
     "purpose": "omitted JSON body has no content and no content-type",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/client.test.ts",
     "purpose": "transport errors propagate and closed client rejects",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/config.test.ts",
     "purpose": "configuration defaults and CLI overrides environment without mutation",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/config.test.ts",
-    "purpose": "invalid settings rejected: ",
-    "javaEvidence": null
+    "purpose": "invalid settings rejected: {\"TEST_ENV\":\"staging\"}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "invalid settings rejected: {\"BASE_URL\":\"invalid\"}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "invalid settings rejected: {\"BASE_URL\":\"ftp://test\"}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "invalid settings rejected: {\"BASE_URL\":\"http://user:pass@test\"}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "invalid settings rejected: {\"HTTP_TIMEOUT_SECONDS\":\"0\"}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "invalid settings rejected: {\"HTTP_TIMEOUT_SECONDS\":\"-1\"}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "invalid settings rejected: {\"HTTP_TIMEOUT_SECONDS\":\"oops\"}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/config.test.ts",
+    "purpose": "invalid settings rejected: {\"HTTP_TIMEOUT_SECONDS\":\"Infinity\"}",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/config.test.ts",
     "purpose": "dev/prod settings are independent and empty token remains empty",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/SettingsTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract-source.test.ts",
     "purpose": "source contract retains five operations and both environments",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract-trace.test.ts",
     "purpose": "contract trace explains success and correlates with HTTP request",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract-trace.test.ts",
-    "purpose": "contract trace explains ",
-    "javaEvidence": null
+    "purpose": "contract trace explains status failure",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace explains operation failure",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace explains response failure",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace explains media failure",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace explains json failure",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace explains schema failure",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract-trace.test.ts",
+    "purpose": "contract trace explains nonempty failure",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract-trace.test.ts",
     "purpose": "empty response has a successful trace",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract-trace.test.ts",
     "purpose": "contract trace is opt-in",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract-trace.test.ts",
     "purpose": "unexpected-status errors redact structured and configured secrets",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract.test.ts",
     "purpose": "contract returns data unchanged and permits schema-valid empty name/additional fields",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "status first",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "undeclared operation",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "undeclared response",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "media type",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "invalid JSON",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "incomplete schema",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "nonempty 204",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract.test.ts",
     "purpose": "empty 204 passes",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract.test.ts",
-    "purpose": "age is not coerced: ",
-    "javaEvidence": null
+    "purpose": "age is not coerced: \"42\"",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract.test.ts",
-    "purpose": "Python email format compatibility: ",
-    "javaEvidence": null
+    "purpose": "age is not coerced: true",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "age is not coerced: 0",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "age is not coerced: 151",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "age is not coerced: 42.5",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "Python email format compatibility: a@b",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "Python email format compatibility: @",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/contract.test.ts",
+    "purpose": "Python email format compatibility: a+b%tag@example.com",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract.test.ts",
     "purpose": "invalid email rejected",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/contract.test.ts",
     "purpose": "external references are rejected",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ContractTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/evidence-documentation.test.ts",
     "purpose": "historical generated case totals cite their actual CI execution",
-    "javaEvidence": null
-  },
-  {
-    "source": "tests/unit/evidence-documentation.test.ts",
-    "purpose": "## Execution evidence\\n",
-    "javaEvidence": null
-  },
-  {
-    "source": "tests/unit/evidence-documentation.test.ts",
-    "purpose": "\\n## ",
-    "javaEvidence": null
-  },
-  {
-    "source": "tests/unit/evidence-documentation.test.ts",
-    "purpose": "\\n\\n",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/DocumentationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/evidence.test.ts",
     "purpose": "retained HTML/XML/log/JSON reject secret leaks independently of NDJSON",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/evidence.test.ts",
     "purpose": "unsupported binary formats and symlinks cannot bypass the artifact gate",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-checks.test.ts",
     "purpose": "catalog accounts for all 13 registry checks and four explicit N/A checks",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-checks.test.ts",
     "purpose": "server/status/media/schema checkers have independent passing and failing witnesses",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-checks.test.ts",
     "purpose": "positive acceptance and negative rejection retain source status allowlists",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-checks.test.ts",
     "purpose": "missing required Authentication has passing and failing witnesses",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-checks.test.ts",
     "purpose": "unsupported verb requires 405 + Allow and bypasses documented response checks",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-checks.test.ts",
     "purpose": "OPTIONS Allow checker permits implicit HEAD/OPTIONS and rejects missing/extra methods",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-email.test.ts",
     "purpose": "generated email format matches the pinned jsonschema_rs golden corpus",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EmailFormatsTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-email.test.ts",
     "purpose": "generated response/request email validation is stricter than deterministic FormatChecker",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EmailFormatsTest.java",
+      "src/test/java/sdet/ContractTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-fuzz.test.ts",
     "purpose": "the same seed/config reproduces cases and each advertised mode passes an independent oracle",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/FuzzingTest.java",
+      "src/test/java/sdet/PlatformTest.java",
+      "src/test/java/sdet/ExplorationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-fuzz.test.ts",
     "purpose": "fuzz counterexamples shrink without losing the failure and replay exactly",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/FuzzingTest.java",
+      "src/test/java/sdet/PlatformTest.java",
+      "src/test/java/sdet/ExplorationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-fuzz.test.ts",
     "purpose": "passing property obeys example count and operational exceptions remain errors",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/FuzzingTest.java",
+      "src/test/java/sdet/PlatformTest.java",
+      "src/test/java/sdet/ExplorationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-resources.test.ts",
     "purpose": "positive PUT resets, creates, verifies and injects the same owned email into path/body",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GeneratedResourcesTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-resources.test.ts",
     "purpose": "negative PUT body stays invalid, renamed body email is tracked, invalid paths are not repaired",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GeneratedResourcesTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-resources.test.ts",
     "purpose": "reset, create and verify failures stop preparation at the failed step",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GeneratedResourcesTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-resources.test.ts",
     "purpose": "cleanup continues after transport errors, ignores DELETE status, but exposes programming errors",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GeneratedResourcesTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-runner.test.ts",
     "purpose": "all phases integrate across five operations with serial requests and valid scrubbed evidence",
-    "javaEvidence": null
-  },
-  {
-    "source": "tests/unit/generation-runner.test.ts",
-    "purpose": "\\n",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ExplorationTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-runner.test.ts",
     "purpose": "API findings are returned, bounded and reported without being converted to engine errors",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ExplorationTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-runner.test.ts",
     "purpose": "transport/setup failure blocks, retains an error report, and redacts its message",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ExplorationTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-runner.test.ts",
     "purpose": "phase/coverage limits are visible and aborted execution is an operational failure",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ExplorationTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-schema.test.ts",
     "purpose": "discovers all five operation IDs, shared path parameters and required Authentication",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-schema.test.ts",
     "purpose": "examples and boundary mutations are derived from YAML and independently schema-checked",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-schema.test.ts",
     "purpose": "coverage preserves invalid path metadata and generates missing Authentication and unsupported methods",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-schema.test.ts",
     "purpose": "unsupported pattern, response headers, security and external refs fail closed",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/generation-schema.test.ts",
     "purpose": "a small changed schema changes examples, required-field cases and numeric boundaries",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/GenerationTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/http-trace.test.ts",
     "purpose": "HTTP tracing hides headers, nested secrets and URL credentials",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/http-trace.test.ts",
     "purpose": "tracing is silent by default and handles empty response",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/native-transport.test.ts",
     "purpose": "native transport preserves raw bytes and returns redirects without following them",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/native-transport.test.ts",
     "purpose": "native transport deadline terminates a server that never responds",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/ClientTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/parity.test.ts",
     "purpose": "every reference scenario maps to an existing TypeScript case and file",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/VerificationTest.java",
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/DocumentationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/parity.test.ts",
     "purpose": "the supplied OpenAPI bytes remain unchanged and published sample provenance is explicit",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/VerificationTest.java",
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/DocumentationTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/readiness.test.ts",
     "purpose": "readiness retries operational errors and non-200 until ready",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/DockerRuntimeTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/readiness.test.ts",
     "purpose": "readiness fails within deadline with bounded sleeps",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/DockerRuntimeTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/redaction.test.ts",
     "purpose": "recursively redacts normalized sensitive keys without mutating source",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/redaction.test.ts",
     "purpose": "raw, percent-encoded and plus-encoded secrets disappear from keys and values",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/redaction.test.ts",
     "purpose": "text redaction covers URLs and diagnostic error strings",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/redaction.test.ts",
     "purpose": "overlapping secrets are replaced longest first and empty secrets are ignored",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/redaction.test.ts",
     "purpose": "JSON primitives, shared values and prototype-named keys remain safe",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/redaction.test.ts",
     "purpose": "diagnostic cycles do not cause infinite recursion",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/redaction.test.ts",
     "purpose": "independent verifier rejects both surviving values and sensitive structures",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/redaction.test.ts",
     "purpose": "raw redaction remains available for malformed Unicode diagnostic input",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/TraceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "scrubs nested NDJSON records, preserves modes and leaves unrelated files intact",
-    "javaEvidence": null
-  },
-  {
-    "source": "tests/unit/scrubber.test.ts",
-    "purpose": "\\n",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "accepts a tree without NDJSON and an empty NDJSON file",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "accepts CRLF and a final record without a newline",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects invalid JSON without replacing original or leaving a temporary file",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects blank record without replacing original or leaving a temporary file",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects whitespace record without replacing original or leaving a temporary file",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects invalid UTF-8 without replacing original or leaving a temporary file",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rejects UTF-8 BOM without replacing original or leaving a temporary file",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "rejects missing and non-directory evidence roots",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "rejects a directory masquerading as an NDJSON file",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "rejects root and NDJSON symlinks without modifying their targets",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "rejects directory symlinks so linked raw evidence cannot bypass verification",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "rejects resolved paths that escape the evidence root",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "readFile failure preserves original, removes temporary file and hides unsafe OS details",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "writeFile failure preserves original, removes temporary file and hides unsafe OS details",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "chmod failure preserves original, removes temporary file and hides unsafe OS details",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/unit/scrubber.test.ts",
+    "purpose": "rename failure preserves original, removes temporary file and hides unsafe OS details",
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "atomicity applies to each file; later bad file still blocks the whole tree",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "exclusive temporary-file collision never deletes an unowned file",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/scrubber.test.ts",
     "purpose": "CLI reads env secrets, returns truthful exit codes and never prints their values",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/EvidenceTest.java",
+      "src/test/java/sdet/AdvancedInfrastructureTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/test-data.test.ts",
     "purpose": "factory supplies unique environment-labelled emails and preserves overrides",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/OwnedUsersTest.java",
+      "src/main/java/sdet/Scenarios.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/test-data.test.ts",
     "purpose": "cleanup only deletes registered resources in their own environments",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/OwnedUsersTest.java",
+      "src/main/java/sdet/Scenarios.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/test-data.test.ts",
     "purpose": "curated cleanup transport errors propagate",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/OwnedUsersTest.java",
+      "src/main/java/sdet/Scenarios.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/workflow.test.ts",
     "purpose": "external actions are immutable and checkout does not retain credentials",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/workflow.test.ts",
     "purpose": "repository permissions and application credential are narrowly scoped",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/workflow.test.ts",
     "purpose": "generated operational failures block but still run after deterministic failure",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/workflow.test.ts",
     "purpose": "evidence upload follows a successful scrub and retention is bounded",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/workflow.test.ts",
     "purpose": "container cleanup executes even after failures",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
   },
   {
     "source": "tests/unit/workflow.test.ts",
     "purpose": "every workflow keeps external actions immutable",
-    "javaEvidence": null
+    "suite": "unit",
+    "javaEvidence": [
+      "src/test/java/sdet/QualityTest.java",
+      "src/test/java/sdet/CiLifecycleTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for exact",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for strict",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for unaffected",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for fixed",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for network",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for changed",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for setup",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for teardown",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/gate.test.ts",
+    "purpose": "runner and reports agree for secret",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/RunnerTest.java"
+    ],
+    "referenceOutcome": "PASS"
+  },
+  {
+    "source": "tests/infrastructure/runtime.test.ts",
+    "purpose": "managed Docker API starts on a private port and stops idempotently",
+    "suite": "infrastructure",
+    "javaEvidence": [
+      "src/test/java/sdet/DockerRuntimeTest.java",
+      "src/test/java/sdet/SignalTest.java"
+    ],
+    "referenceOutcome": "PASS"
   }
 ]

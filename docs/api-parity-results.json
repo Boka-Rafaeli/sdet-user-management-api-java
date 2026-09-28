@@ -1,0 +1,674 @@
+{
+  "referenceCommit": "d21686120c38aa6292d6370dc0bfe09aeff039f1",
+  "javaCommit": "12ff0f5da1f9cc6792b48d5a80fc92fdcbd9ee8e",
+  "isolatedContainers": true,
+  "image": "ghcr.io/danielsilva-loanpro/sdet-interview-challenge@sha256:c80c42ffafccb6ba9cd9a128421445d308225f09902c03aeadbc99e321176bbc",
+  "results": [
+    {
+      "scope": "dev",
+      "id": "test_create_accepts_documented_age_boundaries[maximum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_accepts_documented_age_boundaries[minimum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_accepts_empty_name_allowed_by_contract",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_get_and_list_user",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_non_object_json_body[array]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_non_object_json_body[string]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-above-maximum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-below-minimum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-boolean]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-float]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-object]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-string]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[email-integer]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[invalid-email]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[missing-age]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[missing-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[missing-name]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[name-integer]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[null-age]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[null-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[null-name]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_create_rejects_unsupported_request_media_type",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_delete_rejects_missing_or_invalid_authentication[empty-token]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_delete_rejects_missing_or_invalid_authentication[invalid-token]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_delete_rejects_missing_or_invalid_authentication[missing-header]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_delete_unknown_user_with_valid_token_returns_not_found",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_delete_user_returns_no_content_and_removes_record",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_duplicate_email_returns_conflict",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_email_reserved_character_round_trips_through_encoded_path[percent]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_email_reserved_character_round_trips_through_encoded_path[plus]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_get_unknown_user_returns_not_found",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_list_users_matches_contract",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_accepts_empty_name_allowed_by_contract",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_persists_changes",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_persists_email_change",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_non_object_json_body[array]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_non_object_json_body[string]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-above-maximum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-below-minimum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-boolean]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-float]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-object]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-string]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[email-integer]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[invalid-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[missing-age]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[missing-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[missing-name]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[name-integer]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[null-age]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[null-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[null-name]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_rejects_unsupported_request_media_type",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_to_duplicate_email_returns_conflict",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "dev",
+      "id": "test_update_unknown_user_returns_not_found",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_accepts_documented_age_boundaries[maximum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_accepts_documented_age_boundaries[minimum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_accepts_empty_name_allowed_by_contract",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_get_and_list_user",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_non_object_json_body[array]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_non_object_json_body[string]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-above-maximum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-below-minimum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-boolean]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-float]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-object]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[age-string]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[email-integer]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[invalid-email]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[missing-age]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[missing-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[missing-name]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[name-integer]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[null-age]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[null-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_payloads_outside_openapi_schema[null-name]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_create_rejects_unsupported_request_media_type",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_delete_rejects_missing_or_invalid_authentication[empty-token]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_delete_rejects_missing_or_invalid_authentication[invalid-token]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_delete_rejects_missing_or_invalid_authentication[missing-header]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_delete_unknown_user_with_valid_token_returns_not_found",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_delete_user_returns_no_content_and_removes_record",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_duplicate_email_returns_conflict",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_email_reserved_character_round_trips_through_encoded_path[percent]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_email_reserved_character_round_trips_through_encoded_path[plus]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_get_unknown_user_returns_not_found",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_list_users_matches_contract",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_accepts_empty_name_allowed_by_contract",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_persists_changes",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_persists_email_change",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_non_object_json_body[array]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_non_object_json_body[string]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-above-maximum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-below-minimum]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-boolean]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-float]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-object]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[age-string]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[email-integer]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[invalid-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[missing-age]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[missing-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[missing-name]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[name-integer]",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[null-age]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[null-email]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_payloads_outside_openapi_schema[null-name]",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_rejects_unsupported_request_media_type",
+      "typescript": "XFAIL",
+      "java": "XFAIL"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_to_duplicate_email_returns_conflict",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "prod",
+      "id": "test_update_unknown_user_returns_not_found",
+      "typescript": "PASS",
+      "java": "PASS"
+    },
+    {
+      "scope": "isolation",
+      "id": "test_dev_and_prod_data_is_independent",
+      "typescript": "PASS",
+      "java": "PASS"
+    }
+  ]
+}
