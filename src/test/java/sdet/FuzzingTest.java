@@ -18,6 +18,21 @@ class FuzzingTest {
   }
 
   @Test
+  void seededFuzzContainsBothPositiveAndNegativePayloads() throws Exception {
+    var generation = new Generation(new Contract());
+    for (var operation : generation.operations())
+      if (operation.body() != null) {
+        var values =
+            Fuzzing.cases(generation, operation, "token", 424242, 100).stream()
+                .map(Shrinkable::value)
+                .toList();
+        assertTrue(values.stream().anyMatch(Generation.Case::positive));
+        assertTrue(values.stream().anyMatch(c -> !c.positive()));
+        for (var value : values) assertEquals(value.positive(), generation.valid(operation, value));
+      }
+  }
+
+  @Test
   void seedAndSerializedReplay() throws Exception {
     var g = new Generation(new Contract());
     for (var op : g.operations()) {

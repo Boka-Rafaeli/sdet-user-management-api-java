@@ -63,3 +63,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T14:47:52Z: `test(infrastructure): strengthen malformed evidence and lifecycle witnesses` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `aa50f81`.
 
 2026-09-28T14:48:53Z: `feat(trace): explain ordered contract checks without exposing payloads` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `e62e827`.
+
+2026-09-28T14:49:51Z: `fix(verification): retain negative fuzzing and fail incomplete JUnit reports` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `e033eeb`.

@@ -93,6 +93,15 @@ public final class SuiteRunner {
     }
     for (String error : infrastructure)
       entries.add(new Reports.Entry("infrastructure", "FAIL", "", error));
+    var actual = entries.stream().map(Reports.Entry::id).toList();
+    if (expected.isEmpty()
+        || expected.size() != new HashSet<>(expected).size()
+        || actual.size() != expected.size()
+        || actual.size() != new HashSet<>(actual).size()
+        || !new HashSet<>(actual).equals(new HashSet<>(expected)))
+      entries.add(
+          new Reports.Entry(
+              "manifest-completeness", "FAIL", "", "Collected/executed IDs differ from manifest"));
     Reports.write(output, scope, digest, expected, entries);
     return Reports.complete(expected, entries);
   }

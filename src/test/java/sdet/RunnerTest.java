@@ -75,6 +75,8 @@ class RunnerTest {
       factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
       factory.newDocumentBuilder().parse(dir.resolve("junit.xml").toFile());
       assertTrue(Files.readString(dir.resolve("report.html")).contains("<!doctype html>"));
+      if (!mode.equals("exact"))
+        assertTrue(Files.readString(dir.resolve("junit.xml")).contains("<failure"), mode);
       if (mode.equals("exact")) {
         assertTrue(Files.readString(dir.resolve("junit.xml")).contains("XFAIL"));
         assertTrue(Files.readString(dir.resolve("report.html")).contains("case&lt;&amp;&quot;"));

@@ -78,9 +78,14 @@ public final class Fuzzing {
           "Generation requires an owned jqwik session through consumption and shrinking");
     var base = g.example(op, token);
     Arbitrary<Generation.Case> arbitrary;
-    if (op.body() != null)
+    if (op.body() != null) {
+      var boundaries =
+          g.coverage(op, token).stream()
+              .filter(c -> c.hasBody() && !c.unsupported())
+              .map(Generation.Case::body)
+              .toList();
       arbitrary =
-          values(op.body())
+          Arbitraries.oneOf(values(op.body()), Arbitraries.of(boundaries))
               .map(
                   body ->
                       new Generation.Case(
@@ -97,32 +102,40 @@ public final class Fuzzing {
                           "jqwik-body",
                           false,
                           ""));
-    else
+    } else {
+      var addresses =
+          Arbitraries.oneOf(
+              Arbitraries.strings()
+                  .alpha()
+                  .ofMinLength(1)
+                  .ofMaxLength(20)
+                  .map(value -> value + "@example.com"),
+              Arbitraries.of("invalid-email", "@", "a@-b"));
       arbitrary =
-          Arbitraries.strings()
-              .alpha()
-              .ofMinLength(1)
-              .ofMaxLength(20)
-              .map(
-                  value -> {
-                    var parameters = new HashMap<>(base.parameters());
-                    if (parameters.containsKey("email"))
-                      parameters.put("email", value + "@example.com");
-                    return new Generation.Case(
-                        op.id(),
-                        op.method(),
-                        op.path(),
-                        parameters,
-                        base.headers(),
-                        base.body(),
-                        base.hasBody(),
-                        true,
-                        true,
-                        "fuzzing",
-                        "jqwik-path",
-                        false,
-                        "");
-                  });
+          addresses.map(
+              value -> {
+                var parameters = new HashMap<>(base.parameters());
+                boolean positive = true;
+                if (parameters.containsKey("email")) {
+                  parameters.put("email", value);
+                  positive = EmailFormats.generated(value);
+                }
+                return new Generation.Case(
+                    op.id(),
+                    op.method(),
+                    op.path(),
+                    parameters,
+                    base.headers(),
+                    base.body(),
+                    base.hasBody(),
+                    positive,
+                    positive,
+                    "fuzzing",
+                    "jqwik-path",
+                    false,
+                    "");
+              });
+    }
     var generator = arbitrary.generator(100);
     var random = new Random(seed);
     var result = new ArrayList<Shrinkable<Generation.Case>>();

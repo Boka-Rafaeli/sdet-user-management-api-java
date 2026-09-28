@@ -143,10 +143,12 @@ public final class Exploration {
     record.set("preparedRequest", Json.MAPPER.valueToTree(checked.request()));
     record.set("checks", Json.MAPPER.valueToTree(checked.checks()));
     if (minimal != null) record.set("minimal", Json.MAPPER.valueToTree(minimal));
+    String safeResponse = redact.body(checked.response().text());
+    record.put("responseTruncated", safeResponse.length() > 16384);
     record
         .putObject("response")
         .put("status", checked.response().status())
-        .put("body", redact.body(checked.response().text()))
+        .put("body", safeResponse.substring(0, Math.min(16384, safeResponse.length())))
         .set("headers", Json.MAPPER.valueToTree(checked.response().headers()));
     evidence.add(redact.json(record));
   }
@@ -161,6 +163,8 @@ public final class Exploration {
   }
 
   private Result runSession(Path output, String digest) throws Exception {
+    if (count != 0 || !evidence.isEmpty())
+      throw new IllegalStateException("Explorer instances are single-use");
     var operations = generation.operations();
     for (var op : operations)
       counters.put(
@@ -191,6 +195,8 @@ public final class Exploration {
               stop = findings.size() >= limits.failures() ? "failure-budget" : "record-budget";
               break outer;
             }
+            if (Thread.currentThread().isInterrupted())
+              throw new InterruptedException("Exploration cancelled");
             runCase(op, c, null);
           }
           for (var c : cases) {
@@ -198,6 +204,8 @@ public final class Exploration {
               stop = findings.size() >= limits.failures() ? "failure-budget" : "record-budget";
               break outer;
             }
+            if (Thread.currentThread().isInterrupted())
+              throw new InterruptedException("Exploration cancelled");
             runCase(op, c.value(), c);
           }
         }
