@@ -106,7 +106,10 @@ public final class Scenarios {
   public static List<SuiteRunner.Case> build(
       String scope, Settings settings, ApiClient dev, ApiClient prod, Contract contract) {
     var b = new Builder(settings, dev, prod, contract);
-    if (scope.equals("isolation")) return b.cases;
+    if (scope.equals("isolation")) {
+      Isolation.add(b);
+      return b.cases;
+    }
     Crud.add(b);
     Updates.add(b);
     Validation.post(b);
