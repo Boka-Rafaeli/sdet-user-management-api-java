@@ -51,3 +51,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T03:21:06Z: `feat(generation): emit bounded exploration evidence` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `7324ed5`.
 
 2026-09-28T03:22:01Z: `fix(runtime): keep Docker command stdout separate from pull diagnostics` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `ffe2a28`.
+
+2026-09-28T03:22:56Z: `feat(security): scrub and verify retained evidence` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `06f5652`.
