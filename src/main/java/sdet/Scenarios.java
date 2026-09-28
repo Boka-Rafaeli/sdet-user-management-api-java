@@ -110,6 +110,7 @@ public final class Scenarios {
     Crud.add(b);
     Updates.add(b);
     Validation.post(b);
+    PutValidation.add(b);
     return b.cases;
   }
 

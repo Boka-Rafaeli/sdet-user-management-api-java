@@ -29,3 +29,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T03:05:09Z: `test(update): verify persistence and email changes` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `9e19063`.
 
 2026-09-28T03:06:36Z: `test(validation): cover POST schema boundaries` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `33a6382`.
+
+2026-09-28T03:07:32Z: `test(validation): cover PUT schema boundaries` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `788b702`.
