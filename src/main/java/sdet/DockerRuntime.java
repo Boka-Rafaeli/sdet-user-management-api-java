@@ -161,8 +161,12 @@ public final class DockerRuntime implements AutoCloseable {
   }
 
   public static String execute(List<String> args) throws IOException {
+    return execute(args, "docker");
+  }
+
+  static String execute(List<String> args, String binary) throws IOException {
     var cmd = new ArrayList<String>();
-    cmd.add("docker");
+    cmd.add(binary);
     cmd.addAll(args);
     var process = new ProcessBuilder(cmd).start();
     try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
@@ -178,7 +182,7 @@ public final class DockerRuntime implements AutoCloseable {
         if (process.exitValue() != 0)
           throw new IOException(
               "Docker " + args.getFirst() + " failed (exit " + process.exitValue() + ")");
-        return stdout + stderr;
+        return args.getFirst().equals("logs") ? stdout + stderr : stdout;
       } catch (InterruptedException e) {
         process.destroyForcibly();
         Thread.currentThread().interrupt();

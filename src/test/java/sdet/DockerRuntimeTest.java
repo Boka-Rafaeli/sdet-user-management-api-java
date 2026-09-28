@@ -10,6 +10,21 @@ import org.junit.jupiter.api.Test;
 
 class DockerRuntimeTest {
   @Test
+  void coldPullStderrCannotCorruptContainerId() throws Exception {
+    var binary = java.nio.file.Files.createTempFile("docker-boundary", ".sh");
+    java.nio.file.Files.writeString(
+        binary,
+        "#!/bin/sh\nprintf '%s\\n' '"
+            + "a".repeat(64)
+            + "'\nprintf '%s\\n' 'Pulling image progress' >&2\n");
+    assertTrue(binary.toFile().setExecutable(true));
+    assertEquals("a".repeat(64), DockerRuntime.execute(List.of("run"), binary.toString()).trim());
+    assertTrue(
+        DockerRuntime.execute(List.of("logs"), binary.toString())
+            .contains("Pulling image progress"));
+  }
+
+  @Test
   void ownedCleanupAfterStartupFailure() {
     var calls = new ArrayList<List<String>>();
     assertThrows(
