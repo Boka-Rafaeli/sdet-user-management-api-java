@@ -22,13 +22,7 @@ class SignalTest {
     var dir = Files.createTempDirectory("signal-probe");
     var idFile = dir.resolve("id");
     var process =
-        new ProcessBuilder(
-                Path.of(System.getProperty("java.home"), "bin", "java").toString(),
-                "-cp",
-                System.getProperty(
-                    "surefire.test.class.path", System.getProperty("java.class.path")),
-                Probe.class.getName(),
-                idFile.toString())
+        JvmSupport.process(Probe.class, idFile.toString())
             .redirectErrorStream(true)
             .redirectOutput(dir.resolve("process.log").toFile())
             .start();

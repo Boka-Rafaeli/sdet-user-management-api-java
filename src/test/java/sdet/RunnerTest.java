@@ -91,16 +91,7 @@ class RunnerTest {
             "missing")) {
       Path dir = Files.createTempDirectory("sdet-runner-");
       var process =
-          new ProcessBuilder(
-                  Path.of(System.getProperty("java.home"), "bin", "java").toString(),
-                  "-cp",
-                  System.getProperty(
-                      "surefire.test.class.path", System.getProperty("java.class.path")),
-                  Probe.class.getName(),
-                  mode,
-                  dir.toString())
-              .redirectErrorStream(true)
-              .start();
+          JvmSupport.process(Probe.class, mode, dir.toString()).redirectErrorStream(true).start();
       String log =
           new String(
               process.getInputStream().readAllBytes(), java.nio.charset.StandardCharsets.UTF_8);

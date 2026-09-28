@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.platform.engine.discovery.DiscoverySelectors.selectClass;
 
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
 import net.jqwik.api.*;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.launcher.core.*;
@@ -56,16 +55,7 @@ class PlatformTest {
 
   static Result run(Class<?> fixture) throws Exception {
     var process =
-        new ProcessBuilder(
-                Path.of(System.getProperty("java.home"), "bin", "java").toString(),
-                "-Djqwik.database=target/probe-database",
-                "-cp",
-                System.getProperty(
-                    "surefire.test.class.path", System.getProperty("java.class.path")),
-                Probe.class.getName(),
-                fixture.getName())
-            .redirectErrorStream(true)
-            .start();
+        JvmSupport.process(Probe.class, fixture.getName()).redirectErrorStream(true).start();
     String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
     return new Result(process.waitFor(), output);
   }

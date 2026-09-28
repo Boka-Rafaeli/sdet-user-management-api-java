@@ -9,14 +9,7 @@ import org.junit.jupiter.api.Test;
 class CiLifecycleTest {
   private int stage(Path cwd, String command, String probe) throws Exception {
     var process =
-        new ProcessBuilder(
-                Path.of(System.getProperty("java.home"), "bin", "java").toString(),
-                "-cp",
-                System.getProperty(
-                    "surefire.test.class.path", System.getProperty("java.class.path")),
-                CiMain.class.getName(),
-                command,
-                "dev")
+        JvmSupport.process(CiMain.class, command, "dev")
             .directory(cwd.toFile())
             .redirectErrorStream(true)
             .start();
@@ -30,14 +23,7 @@ class CiLifecycleTest {
 
   private int probe(Path cwd, String command, String probe) throws Exception {
     var builder =
-        new ProcessBuilder(
-                Path.of(System.getProperty("java.home"), "bin", "java").toString(),
-                "-cp",
-                System.getProperty(
-                    "surefire.test.class.path", System.getProperty("java.class.path")),
-                CiMain.class.getName(),
-                command,
-                "dev")
+        JvmSupport.process(CiMain.class, command, "dev")
             .directory(cwd.toFile())
             .redirectErrorStream(true);
     builder.environment().put("CI_PROBE", probe);

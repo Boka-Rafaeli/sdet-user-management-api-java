@@ -69,3 +69,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T14:51:08Z: `test(runner): prove all failure modes through isolated JVM reports` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `e360877`.
 
 2026-09-28T14:57:31Z: `docs: publish Java guide manual assets and verified reports` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `12ff0f5`.
+
+2026-09-28T14:58:29Z: `test(coverage): include subprocess infrastructure in JaCoCo evidence` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `933a5b7`.
