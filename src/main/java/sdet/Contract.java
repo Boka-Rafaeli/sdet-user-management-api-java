@@ -176,25 +176,78 @@ public final class Contract {
   }
 
   public JsonNode response(ApiClient.Response response, String path, String method, int status) {
-    assertEquals(status, response.status(), "Unexpected response status");
+    return response(response, path, method, status, null);
+  }
+
+  public JsonNode response(
+      ApiClient.Response response, String path, String method, int status, Trace trace) {
+    String operationName = method.toUpperCase(Locale.ROOT) + " " + path;
+    check(
+        response,
+        operationName,
+        "status",
+        response.status() == status,
+        "Unexpected response status",
+        trace);
     var operation = document.path("paths").path(path).path(method.toLowerCase(Locale.ROOT));
-    assertFalse(operation.isMissingNode(), "Undeclared operation");
+    check(
+        response,
+        operationName,
+        "operation-declared",
+        !operation.isMissingNode(),
+        "Undeclared operation",
+        trace);
     var entry = operation.path("responses").path(Integer.toString(status));
-    assertFalse(entry.isMissingNode(), "Undeclared status");
+    check(
+        response,
+        operationName,
+        "response-declared",
+        !entry.isMissingNode(),
+        "Undeclared status",
+        trace);
     if (!entry.has("content")) {
-      assertEquals(0, response.body().length, "Expected empty body");
+      check(
+          response,
+          operationName,
+          "empty-body",
+          response.body().length == 0,
+          "Expected empty body",
+          trace);
       return NullNode.instance;
     }
-    assertEquals("application/json", response.media(), "Wrong media type");
+    check(
+        response,
+        operationName,
+        "content-type",
+        response.media().equals("application/json"),
+        "Wrong media type",
+        trace);
     JsonNode body;
     try {
       body = response.json();
     } catch (IllegalArgumentException ex) {
-      throw new AssertionError("Expected JSON response", ex);
+      check(response, operationName, "json-body", false, "Expected JSON response", trace);
+      throw new AssertionError("Unreachable");
     }
-    assertTrue(
+    check(response, operationName, "json-body", true, "Expected JSON response", trace);
+    check(
+        response,
+        operationName,
+        "response-schema",
         valid(entry.path("content").path("application/json").path("schema"), body),
-        "Response violates OpenAPI schema");
+        "Response violates OpenAPI schema",
+        trace);
     return body;
+  }
+
+  private static void check(
+      ApiClient.Response response,
+      String operation,
+      String name,
+      boolean passed,
+      String message,
+      Trace trace) {
+    if (trace != null) trace.contract(response, operation, name, passed);
+    assertTrue(passed, message);
   }
 }

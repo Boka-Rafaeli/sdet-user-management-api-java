@@ -9,6 +9,32 @@ import org.junit.jupiter.api.Test;
 
 class TraceTest {
   @Test
+  void contractStepsExplainSuccessAndFailure() throws Exception {
+    var output = new ArrayList<String>();
+    var trace = new Trace(Settings.load(Map.of(), "--contract-trace"), output::add);
+    var c = new Contract();
+    c.response(
+        ContractTest.response(400, "application/json", "{\"error\":\"bad\"}"),
+        "/users",
+        "post",
+        400,
+        trace);
+    assertTrue(output.stream().anyMatch(v -> v.contains("check=response-schema")));
+    output.clear();
+    assertThrows(
+        AssertionError.class,
+        () ->
+            c.response(
+                ContractTest.response(400, "text/plain", "secret"), "/users", "post", 400, trace));
+    assertTrue(output.getLast().contains("FAIL"));
+    assertTrue(output.getLast().contains("check=content-type"));
+    assertFalse(String.join("", output).contains("secret"));
+    output.clear();
+    c.response(ContractTest.response(204, "", ""), "/users/{email}", "delete", 204, trace);
+    assertTrue(output.getLast().contains("check=empty-body"));
+  }
+
+  @Test
   void nestedKeysRawAndEncodedSecretsAreRemoved() {
     var r = new Redaction("a+b /%");
     var input =

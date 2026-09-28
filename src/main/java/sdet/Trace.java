@@ -47,12 +47,18 @@ public final class Trace {
   }
 
   public void contract(ApiClient.Response r, String operation, boolean passed) {
+    contract(r, operation, "response", passed);
+  }
+
+  public void contract(ApiClient.Response r, String operation, String check, boolean passed) {
     if (contract)
       sink.accept(
           "CONTRACT "
               + (passed ? "PASS" : "FAIL")
               + " operation="
               + operation
+              + " check="
+              + check
               + " request="
               + (r.request() == null ? "-" : r.request().id()));
   }

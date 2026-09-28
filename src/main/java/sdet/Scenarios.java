@@ -46,15 +46,7 @@ public final class Scenarios {
     }
 
     public JsonNode response(ApiClient.Response r, String path, String method, int status) {
-      var trace = new Trace(settings, System.out::println);
-      try {
-        var body = contract.response(r, path, method, status);
-        trace.contract(r, method + " " + path, true);
-        return body;
-      } catch (AssertionError error) {
-        trace.contract(r, method + " " + path, false);
-        throw error;
-      }
+      return contract.response(r, path, method, status, new Trace(settings, System.out::println));
     }
 
     public ObjectNode create() throws Exception {
