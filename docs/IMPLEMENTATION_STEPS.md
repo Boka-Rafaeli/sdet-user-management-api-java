@@ -31,3 +31,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T03:06:36Z: `test(validation): cover POST schema boundaries` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `33a6382`.
 
 2026-09-28T03:07:32Z: `test(validation): cover PUT schema boundaries` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `788b702`.
+
+2026-09-28T03:09:11Z: `test(protocol): cover raw bodies and encoded paths` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `4bceb2e`.

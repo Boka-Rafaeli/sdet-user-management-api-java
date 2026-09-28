@@ -111,6 +111,7 @@ public final class Scenarios {
     Updates.add(b);
     Validation.post(b);
     PutValidation.add(b);
+    Protocol.add(b);
     return b.cases;
   }
 
