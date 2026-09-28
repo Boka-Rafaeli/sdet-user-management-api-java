@@ -108,6 +108,7 @@ public final class Scenarios {
     var b = new Builder(settings, dev, prod, contract);
     if (scope.equals("isolation")) return b.cases;
     Crud.add(b);
+    Updates.add(b);
     return b.cases;
   }
 
