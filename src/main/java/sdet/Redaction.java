@@ -52,24 +52,33 @@ public final class Redaction {
   }
 
   public JsonNode json(JsonNode value) {
+    return json(value, Collections.newSetFromMap(new IdentityHashMap<>()));
+  }
+
+  private JsonNode json(JsonNode value, Set<JsonNode> active) {
     if (value.isTextual()) return TextNode.valueOf(text(value.asText()));
-    if (value.isObject()) {
-      var out = Json.MAPPER.createObjectNode();
-      value
-          .fields()
-          .forEachRemaining(
-              e ->
-                  out.set(
-                      text(e.getKey()),
-                      sensitive(e.getKey()) ? TextNode.valueOf(MASK) : json(e.getValue())));
-      return out;
-    }
-    if (value.isArray()) {
+    if (!value.isContainerNode()) return value.deepCopy();
+    if (!active.add(value)) return TextNode.valueOf("[Circular]");
+    try {
+      if (value.isObject()) {
+        var out = Json.MAPPER.createObjectNode();
+        value
+            .fields()
+            .forEachRemaining(
+                e ->
+                    out.set(
+                        text(e.getKey()),
+                        sensitive(e.getKey())
+                            ? TextNode.valueOf(MASK)
+                            : json(e.getValue(), active)));
+        return out;
+      }
       var out = Json.MAPPER.createArrayNode();
-      value.forEach(v -> out.add(json(v)));
+      value.forEach(v -> out.add(json(v, active)));
       return out;
+    } finally {
+      active.remove(value);
     }
-    return value.deepCopy();
   }
 
   public String body(String body) {
@@ -85,17 +94,26 @@ public final class Redaction {
   }
 
   public boolean clean(JsonNode value) {
+    return clean(value, Collections.newSetFromMap(new IdentityHashMap<>()));
+  }
+
+  private boolean clean(JsonNode value, Set<JsonNode> active) {
     if (value.isTextual()) return clean(value.asText());
-    if (value.isObject()) {
-      var fields = value.fields();
-      while (fields.hasNext()) {
-        var e = fields.next();
-        if (!clean(e.getKey())
-            || sensitive(e.getKey()) && !e.getValue().equals(TextNode.valueOf(MASK))
-            || !clean(e.getValue())) return false;
-      }
+    if (!value.isContainerNode()) return true;
+    if (!active.add(value)) return false;
+    try {
+      if (value.isObject()) {
+        var fields = value.fields();
+        while (fields.hasNext()) {
+          var e = fields.next();
+          if (!clean(e.getKey())
+              || sensitive(e.getKey()) && !e.getValue().equals(TextNode.valueOf(MASK))
+              || !clean(e.getValue(), active)) return false;
+        }
+      } else for (var item : value) if (!clean(item, active)) return false;
+      return true;
+    } finally {
+      active.remove(value);
     }
-    if (value.isArray()) for (var item : value) if (!clean(item)) return false;
-    return true;
   }
 }

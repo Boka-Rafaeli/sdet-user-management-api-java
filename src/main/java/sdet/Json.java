@@ -12,7 +12,10 @@ public final class Json {
 
   public static JsonNode parse(String text) {
     try {
-      return MAPPER.readTree(text);
+      var value = MAPPER.readTree(text);
+      if (value == null || value.isMissingNode())
+        throw new IllegalArgumentException("Empty JSON document");
+      return value;
     } catch (IOException e) {
       throw new IllegalArgumentException("Invalid JSON", e);
     }

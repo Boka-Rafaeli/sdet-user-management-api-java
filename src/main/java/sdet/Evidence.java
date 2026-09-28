@@ -47,7 +47,9 @@ public final class Evidence {
           @Override
           public FileVisitResult preVisitDirectory(Path p, BasicFileAttributes attrs)
               throws IOException {
-            if (Files.isSymbolicLink(p) || !p.toRealPath().startsWith(resolved))
+            if (Files.isSymbolicLink(p)
+                || p.getFileName().toString().endsWith(".ndjson")
+                || !p.toRealPath().startsWith(resolved))
               throw new IOException("Evidence escapes root");
             return FileVisitResult.CONTINUE;
           }
@@ -101,6 +103,8 @@ public final class Evidence {
             created = Files.exists(temporary, LinkOption.NOFOLLOW_LINKS);
             throw e;
           }
+          if (Files.getFileStore(file).supportsFileAttributeView("posix"))
+            Files.setPosixFilePermissions(temporary, Files.getPosixFilePermissions(file));
           disk.move(temporary, file);
           created = false;
         } finally {

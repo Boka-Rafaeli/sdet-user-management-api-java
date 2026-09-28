@@ -59,3 +59,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T03:26:13Z: `ci(api): run isolated scopes and validate failure paths` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `b26c5b1`.
 
 2026-09-28T03:27:25Z: `build(quality): verify dependency checksums and static analysis rules` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `4d9fed8`.
+
+2026-09-28T14:47:52Z: `test(infrastructure): strengthen malformed evidence and lifecycle witnesses` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `aa50f81`.
