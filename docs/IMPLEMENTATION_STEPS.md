@@ -43,3 +43,5 @@ Each implementation commit is validated from a fresh exported index before commi
 2026-09-28T03:14:21Z: `feat(generation): derive examples boundaries and check catalogue` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `a15f8ae`.
 
 2026-09-28T03:17:18Z: `feat(generation): add seeded fuzzing shrinking and replay` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `09a1c78`.
+
+2026-09-28T03:17:36Z: `feat(generation): provision verified resources for writes` — fresh index export; `./mvnw -B verify` and `exec:java -Dexec.mainClass=sdet.Main -Dexec.args="verify --baseline"` passed. Previous SHA: `3293693`.
