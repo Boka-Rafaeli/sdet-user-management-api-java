@@ -98,6 +98,11 @@ public final class DockerRuntime implements AutoCloseable {
     }
   }
 
+  /** Transfer lifecycle ownership to the CI state file and its unconditional stop step. */
+  public void detach() {
+    Runtime.getRuntime().removeShutdownHook(shutdown);
+  }
+
   public String id() {
     return id;
   }

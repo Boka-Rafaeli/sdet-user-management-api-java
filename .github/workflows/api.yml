@@ -1,0 +1,68 @@
+name: Java API
+run-name: API (${{ github.event_name == 'workflow_dispatch' && inputs.scope || 'all' }} / ${{ github.event_name == 'workflow_dispatch' && inputs.probe || 'none' }})
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      scope:
+        type: choice
+        default: all
+        options: [all, dev, prod, isolation]
+      probe:
+        type: choice
+        default: none
+        options: [none, deterministic, generator, scrub]
+permissions:
+  contents: read
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        scope: ${{ fromJSON(github.event_name == 'workflow_dispatch' && inputs.scope != 'all' && format('["{0}"]', inputs.scope) || '["dev","prod","isolation"]') }}
+    env:
+      AUTH_TOKEN: mysecrettoken
+      CI_PROBE: ${{ github.event_name == 'workflow_dispatch' && inputs.probe || 'none' }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with:
+          distribution: temurin
+          java-version: '25.0.4+101.0.LTS'
+          cache: maven
+      - run: ./mvnw -B -DskipTests package
+      - name: Start isolated API and wait for readiness
+        id: start
+        run: ./mvnw -q exec:java -Dexec.mainClass=sdet.CiMain -Dexec.args='start ${{ matrix.scope }}'
+      - name: Run deterministic scope
+        id: deterministic
+        run: ./mvnw -q exec:java -Dexec.mainClass=sdet.CiMain -Dexec.args='deterministic ${{ matrix.scope }}'
+      - name: Run generated exploration
+        id: generator
+        if: ${{ always() && steps.start.outcome == 'success' && matrix.scope != 'isolation' }}
+        run: ./mvnw -q exec:java -Dexec.mainClass=sdet.CiMain -Dexec.args='generator ${{ matrix.scope }}'
+      - name: Capture sanitized logs
+        if: ${{ always() }}
+        run: ./mvnw -q exec:java -Dexec.mainClass=sdet.CiMain -Dexec.args='logs ${{ matrix.scope }}'
+      - name: Remove owned container
+        id: cleanup
+        if: ${{ always() }}
+        run: ./mvnw -q exec:java -Dexec.mainClass=sdet.CiMain -Dexec.args='stop ${{ matrix.scope }}'
+      - name: Scrub and verify evidence
+        id: scrub
+        if: ${{ always() && steps.start.outcome == 'success' }}
+        run: ./mvnw -q exec:java -Dexec.mainClass=sdet.CiMain -Dexec.args='scrub ${{ matrix.scope }}'
+      - name: Upload verified evidence
+        if: ${{ always() && steps.scrub.outcome == 'success' }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: java-api-${{ matrix.scope }}
+          path: reports/run/${{ matrix.scope }}
+          retention-days: 14
+          if-no-files-found: error

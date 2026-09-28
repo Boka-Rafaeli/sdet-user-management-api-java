@@ -3,3 +3,5 @@ reports/run/
 .jqwik-database
 .idea/
 *.iml
+
+.runtime/
