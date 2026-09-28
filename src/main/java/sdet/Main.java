@@ -33,6 +33,13 @@ public final class Main {
                   scope,
                   runtime.digest());
           ok = result && ok;
+          if (!scope.equals("isolation")) {
+            new Exploration(
+                    new Generation(new Contract()),
+                    scope.equals("prod") ? prod : dev,
+                    Exploration.Limits.defaults())
+                .run(Path.of("reports/run", scope, "generated"), runtime.digest());
+          }
           System.out.println(scope + ": " + cases.size() + " cases, complete=" + result);
         }
       } catch (Exception e) {
